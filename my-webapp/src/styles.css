@@ -1,0 +1,17 @@
+body {
+    font-size: 2em;
+}
+
+div {
+    padding: 0.24em;
+}
+
+input {
+    font-size: 1em;
+}
+
+.output {
+    border: solid green 1px;
+    min-height: 1.4em;
+    max-width: 40em;
+}
