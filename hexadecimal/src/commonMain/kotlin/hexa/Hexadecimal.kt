@@ -1,5 +1,20 @@
 package hexa
 
+import hexa.Hexadecimal.parseHexadecimal
+import kotlin.js.ExperimentalJsExport
+import kotlin.js.JsExport
+
+/**
+ * Parse a hexadecimal string.
+ */
+@OptIn(ExperimentalJsExport::class)
+@JsExport
+fun parseHexadecimal(input: String): ByteArray {
+    return input.parseHexadecimal()
+}
+
+@OptIn(ExperimentalJsExport::class)
+@JsExport
 object Hexadecimal {
 
     fun String.parseHexadecimal(): ByteArray {

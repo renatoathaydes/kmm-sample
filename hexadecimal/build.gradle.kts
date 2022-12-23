@@ -19,12 +19,10 @@ kotlin {
             useJUnitPlatform()
         }
     }
-    js(BOTH) {
-        browser {
-            commonWebpackConfig {
-                cssSupport.enabled = true
-            }
-        }
+    js(IR) {
+        binaries.executable()
+        nodejs()
+        browser()
     }
     val hostOs = System.getProperty("os.name")
     val isMingwX64 = hostOs.startsWith("Windows")
@@ -35,7 +33,7 @@ kotlin {
         else -> throw GradleException("Host OS is not supported in Kotlin/Native.")
     }
 
-    
+
     sourceSets {
         val commonMain by getting
         val commonTest by getting {
